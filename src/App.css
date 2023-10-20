@@ -16,6 +16,10 @@ body {
   background-color: hsl(0, 0%, 86%);
 }
 
+*:focus {
+  outline: none;
+}
+
 .app-wrapper {
   margin: 0 auto;
   padding: 2em 1em;
@@ -36,11 +40,6 @@ body {
   border: 1px solid hsl(0, 0%, 86%);
 }
 
-.label-el,
-.input-el {
-  display: block;
-}
-
 .label-el {
   text-transform: uppercase;
   font-weight: bold;
@@ -49,4 +48,16 @@ body {
 
 .input-el {
   appearance: none;
+}
+
+.input-el:focus {
+  border: 1px solid hsl(259, 100%, 65%);
+}
+
+.block {
+  display: block;
+}
+
+[placeholder] {
+  font-weight: bold;
 }
