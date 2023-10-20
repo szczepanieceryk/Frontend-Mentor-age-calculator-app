@@ -4,15 +4,15 @@ const DataDisplay = () => {
       <span className="single-line block">
         <span className="disaplyed-value">--</span>
 
-        <span className="years">years</span>
+        <span className="time"> years</span>
       </span>
       <span className="single-line block">
         <span className="disaplyed-value">--</span>
-        <span className="years">months</span>
+        <span className="time"> months</span>
       </span>
       <span className="single-line block">
         <span className="disaplyed-value">--</span>
-        <span className="years">days</span>
+        <span className="time">days</span>
       </span>
     </div>
   );

@@ -61,3 +61,15 @@ body {
 [placeholder] {
   font-weight: bold;
 }
+
+.disaplyed-value {
+  margin-right: 0.2em;
+  color: hsl(259, 100%, 65%);
+}
+
+.time,
+.disaplyed-value {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 32px;
+}
