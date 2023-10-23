@@ -1,10 +1,6 @@
 import { useState } from "react";
 
-const AgeInput = () => {
-  const [day, setDay] = useState("");
-  const [month, setMonth] = useState("");
-  const [year, setYear] = useState("");
-
+const AgeInput = ({ setDay, day, setMonth, month, setYear, year }) => {
   const [isValidDay, setIsValidDay] = useState(true);
   const [isValidMonth, setIsValidMonth] = useState(true);
   const [isValidYear, setIsValidYear] = useState(true);
