@@ -23,11 +23,14 @@ const App = () => {
       </div>
       <div class="attribution">
         Challenge by{" "}
-        <a href="https://www.frontendmentor.io?ref=challenge">
+        <a className="link" href="https://www.frontendmentor.io?ref=challenge">
           Frontend Mentor
         </a>
         . Coded by{" "}
-        <a href="https://github.com/szczepanieceryk">Eryk Szczepaniec </a>.
+        <a className="link" href="https://github.com/szczepanieceryk">
+          Eryk Szczepaniec{" "}
+        </a>
+        .
       </div>
     </div>
   );
