@@ -33,7 +33,7 @@ body {
 }
 
 .input-el {
-  margin: 0.5em 0 1em;
+  margin: 0.5em 0 0.2em;
   padding: 1em;
   max-width: 60px;
   border-radius: 8px;
@@ -50,6 +50,12 @@ body {
   appearance: none;
 }
 
+.input-el.error {
+  appearance: none;
+  color: hsl(0, 1%, 44%);
+  border: 1px solid hsl(0, 100%, 67%);
+}
+
 .input-el:focus {
   border: 1px solid hsl(259, 100%, 65%);
 }
@@ -60,6 +66,7 @@ body {
 
 [placeholder] {
   font-weight: bold;
+  color: hsl(0, 0%, 8%);
 }
 
 .disaplyed-value {
@@ -72,4 +79,13 @@ body {
   font-weight: bold;
   font-style: italic;
   font-size: 32px;
+}
+
+.error {
+  color: hsl(0, 100%, 67%);
+}
+
+.error-msg {
+  font-size: 10px;
+  height: 10px;
 }
