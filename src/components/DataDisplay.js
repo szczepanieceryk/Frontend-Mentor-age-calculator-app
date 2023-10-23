@@ -24,6 +24,7 @@ const DataDisplay = ({ day, month, year }) => {
 
   return (
     <div className="data-dsiplay-wrapper">
+      <div className="spacer-line"></div>
       <span className="single-line block">
         <span className="disaplyed-value">
           {yearToDisplay ? yearToDisplay : "--"}

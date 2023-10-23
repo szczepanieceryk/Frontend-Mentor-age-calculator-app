@@ -21,7 +21,14 @@ const App = () => {
         />
         <DataDisplay day={day} month={month} year={year} />
       </div>
-      Challenge by Frontend Mentor. Coded by Your Name Here.
+      <div class="attribution">
+        Challenge by{" "}
+        <a href="https://www.frontendmentor.io?ref=challenge">
+          Frontend Mentor
+        </a>
+        . Coded by{" "}
+        <a href="https://github.com/szczepanieceryk">Eryk Szczepaniec </a>.
+      </div>
     </div>
   );
 };

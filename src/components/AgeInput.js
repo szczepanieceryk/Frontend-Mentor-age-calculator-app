@@ -46,12 +46,12 @@ const AgeInput = ({ setDay, day, setMonth, month, setYear, year }) => {
     <div className="inputs-wrapper">
       <div className="single-input">
         <label
-          className={isValidDay ? "label-el" : "label-el error"}
+          className={isValidDay ? "label-el block" : "label-el error"}
           htmlFor="day-input-id"
         >
           Day
           <input
-            className={isValidDay ? "input-el" : "input-el error"}
+            className={isValidDay ? "input-el block" : "input-el error"}
             type="number"
             id="day-input-id"
             placeholder="DD"
@@ -66,12 +66,12 @@ const AgeInput = ({ setDay, day, setMonth, month, setYear, year }) => {
 
       <div className="single-input">
         <label
-          className={isValidMonth ? "label-el" : "label-el error"}
+          className={isValidMonth ? "label-el block" : "label-el error"}
           htmlFor="month-input-id"
         >
           Month
           <input
-            className={isValidMonth ? "input-el" : "input-el error"}
+            className={isValidMonth ? "input-el block" : "input-el error"}
             type="number"
             id="month-input-id"
             placeholder="MM"
@@ -86,12 +86,12 @@ const AgeInput = ({ setDay, day, setMonth, month, setYear, year }) => {
 
       <div className="single-input">
         <label
-          className={isValidYear ? "label-el" : "label-el error"}
+          className={isValidYear ? "label-el block" : "label-el error"}
           htmlFor="year-input-id"
         >
           Year
           <input
-            className={isValidYear ? "input-el" : "input-el error"}
+            className={isValidYear ? "input-el block" : "input-el error"}
             type="number"
             id="year-input-id"
             placeholder="YYYY"
