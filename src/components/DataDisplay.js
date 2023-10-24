@@ -1,6 +1,7 @@
 const DataDisplay = ({ day, month, year }) => {
   const date = new Date();
 
+  const defaultValue = "--";
   const currentDay = date.getDate();
   const currentMonth = date.getMonth() + 1;
   const currentYear = date.getFullYear();
@@ -24,25 +25,26 @@ const DataDisplay = ({ day, month, year }) => {
 
   return (
     <div className="data-dsiplay-wrapper">
-      <div className="spacer-line"></div>
       <span className="single-line block">
         <span className="disaplyed-value">
-          {yearToDisplay ? yearToDisplay : "--"}
+          {yearToDisplay >= 0 ? yearToDisplay : defaultValue}
         </span>
 
-        <span className="time"> years</span>
+        <span className="time"> {yearToDisplay === 1 ? "year" : "years"}</span>
       </span>
       <span className="single-line block">
         <span className="disaplyed-value">
-          {monthToDisplay ? monthToDisplay : "--"}
+          {monthToDisplay >= 0 ? monthToDisplay : defaultValue}
         </span>
-        <span className="time"> months</span>
+        <span className="time">
+          {monthToDisplay === 1 ? "month" : "months"}
+        </span>
       </span>
       <span className="single-line block">
         <span className="disaplyed-value">
-          {daysToDisplay ? daysToDisplay : "--"}
+          {daysToDisplay >= 0 ? daysToDisplay : defaultValue}
         </span>
-        <span className="time">days</span>
+        <span className="time">{daysToDisplay === 1 ? "day" : "days"}</span>
       </span>
     </div>
   );

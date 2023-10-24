@@ -7,6 +7,7 @@
   --purple: hsl(259, 100%, 65%);
   --dark-blue: hsl(228, 45%, 44%);
   --light-gray: hsl(0, 1%, 44%);
+  --off-black: hsl(0, 0%, 8%);
   /* fonts */
   --font-family: "Poppins", sans-serif;
 }
@@ -26,6 +27,10 @@ input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.block {
+  display: block;
 }
 
 .app-wrapper {
@@ -50,6 +55,7 @@ input[type="number"]::-webkit-outer-spin-button {
   border-radius: 8px;
   border: 1px solid var(--border-color);
   appearance: none;
+  display: block;
 }
 
 .input-el.error {
@@ -70,19 +76,42 @@ input[type="number"]::-webkit-outer-spin-button {
   cursor: pointer;
 }
 
-.block {
-  display: block;
-}
-
 [placeholder] {
   font-weight: bold;
   color: var(--light-gray);
 }
 
 .spacer-line {
+  position: relative;
   height: 1px;
   background-color: var(--border-color);
-  margin: 1em auto;
+  margin: 3em auto 3em;
+}
+
+.btn-submit {
+  position: absolute;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background-color: var(--purple);
+  border: none;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.btn-submit:hover {
+  background-color: var(--off-black);
+}
+
+.btn-submit-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .disaplyed-value {
@@ -99,10 +128,11 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .error {
   color: var(--error);
+  display: block;
 }
 
 .error-msg {
-  font-size: 10px;
+  font-size: 8px;
   height: 10px;
 }
 
@@ -121,5 +151,8 @@ input[type="number"]::-webkit-outer-spin-button {
   }
   .inputs-wrapper {
     max-width: 350px;
+  }
+  .btn-submit {
+    left: 90%;
   }
 }

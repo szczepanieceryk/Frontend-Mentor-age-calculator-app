@@ -1,4 +1,5 @@
 import { useState } from "react";
+import arrowIcon from "../assets/images/icon-arrow.svg";
 
 const AgeInput = ({ setDay, day, setMonth, month, setYear, year }) => {
   const [isValidDay, setIsValidDay] = useState(true);
@@ -7,6 +8,7 @@ const AgeInput = ({ setDay, day, setMonth, month, setYear, year }) => {
 
   const date = new Date();
   const currentYear = date.getFullYear();
+  const currentMonth = date.getMonth() + 1;
 
   const validateDay = (value) => {
     const num = Number(value);
@@ -42,68 +44,83 @@ const AgeInput = ({ setDay, day, setMonth, month, setYear, year }) => {
     }
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log("form submitted");
+  };
   return (
-    <div className="inputs-wrapper">
-      <div className="single-input">
-        <label
-          className={isValidDay ? "label-el block" : "label-el error"}
-          htmlFor="day-input-id"
-        >
-          Day
-          <input
-            className={isValidDay ? "input-el block" : "input-el error"}
-            type="number"
-            id="day-input-id"
-            placeholder="DD"
-            value={day}
-            onChange={handleChange}
-          />
-        </label>
-        {!isValidDay && (
-          <small className="error-msg block error">Must be a valid date</small>
-        )}
-      </div>
+    <form onSubmit={handleSubmit}>
+      <div className="inputs-wrapper">
+        <div className="single-input">
+          <label
+            className={isValidDay ? "label-el block" : "label-el error"}
+            htmlFor="day-input-id"
+          >
+            Day
+            <input
+              className={isValidDay ? "input-el" : "input-el error"}
+              type="number"
+              id="day-input-id"
+              placeholder="DD"
+              value={day}
+              onChange={handleChange}
+            />
+          </label>
+          {!isValidDay && (
+            <small className="error-msg error">Must be a valid date</small>
+          )}
+        </div>
 
-      <div className="single-input">
-        <label
-          className={isValidMonth ? "label-el block" : "label-el error"}
-          htmlFor="month-input-id"
-        >
-          Month
-          <input
-            className={isValidMonth ? "input-el block" : "input-el error"}
-            type="number"
-            id="month-input-id"
-            placeholder="MM"
-            value={month}
-            onChange={handleChange}
-          />
-        </label>
-        {!isValidMonth && (
-          <small className="error-msg block error">Must be a valid date</small>
-        )}
-      </div>
+        <div className="single-input">
+          <label
+            className={isValidMonth ? "label-el block" : "label-el error"}
+            htmlFor="month-input-id"
+          >
+            Month
+            <input
+              className={isValidMonth ? "input-el" : "input-el error"}
+              type="number"
+              id="month-input-id"
+              placeholder="MM"
+              value={month}
+              onChange={handleChange}
+            />
+          </label>
+          {!isValidMonth && (
+            <small className="error-msg block error">
+              Must be a valid date
+            </small>
+          )}
+        </div>
 
-      <div className="single-input">
-        <label
-          className={isValidYear ? "label-el block" : "label-el error"}
-          htmlFor="year-input-id"
-        >
-          Year
-          <input
-            className={isValidYear ? "input-el block" : "input-el error"}
-            type="number"
-            id="year-input-id"
-            placeholder="YYYY"
-            value={year}
-            onChange={handleChange}
-          />
-        </label>
-        {!isValidYear && (
-          <small className="error-msg block error">Must be a valid date</small>
-        )}
+        <div className="single-input">
+          <label
+            className={isValidYear ? "label-el block" : "label-el error"}
+            htmlFor="year-input-id"
+          >
+            Year
+            <input
+              className={isValidYear ? "input-el" : "input-el error"}
+              type="number"
+              id="year-input-id"
+              placeholder="YYYY"
+              value={year}
+              onChange={handleChange}
+            />
+          </label>
+          {!isValidYear && (
+            <small className="error-msg block error">
+              Must be a valid date
+            </small>
+          )}
+        </div>
       </div>
-    </div>
+      <div className="spacer-line">
+        <button className="btn-submit">
+          <img src={arrowIcon} alt="submit icon" className="btn-submit-icon" />
+        </button>
+      </div>
+    </form>
   );
 };
 
