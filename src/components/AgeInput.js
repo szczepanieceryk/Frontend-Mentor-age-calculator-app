@@ -1,14 +1,31 @@
 import { useState } from "react";
-import arrowIcon from "../assets/images/icon-arrow.svg";
+import arrowIcon from "../images/icon-arrow.svg";
 
-const AgeInput = ({ setDay, day, setMonth, month, setYear, year }) => {
+const AgeInput = ({ setDate }) => {
+  const [day, setDay] = useState("--");
+  const [month, setMonth] = useState("--");
+  const [year, setYear] = useState("--");
+
   const [isValidDay, setIsValidDay] = useState(true);
   const [isValidMonth, setIsValidMonth] = useState(true);
   const [isValidYear, setIsValidYear] = useState(true);
+  const [futureDate, setFutureDate] = useState(false);
 
   const date = new Date();
   const currentYear = date.getFullYear();
-  const currentMonth = date.getMonth() + 1;
+
+  const validateCompleteDate = () => {
+    const inputDate = new Date(year, month - 1, day);
+    const currentDate = new Date();
+
+    console.log("input date", inputDate);
+    console.log("current date", currentDate);
+
+    inputDate.setHours(0, 0, 0, 0);
+    currentDate.setHours(0, 0, 0, 0);
+
+    return inputDate <= currentDate;
+  };
 
   const validateDay = (value) => {
     const num = Number(value);
@@ -46,7 +63,24 @@ const AgeInput = ({ setDay, day, setMonth, month, setYear, year }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("form submitted");
+
+    const isValidDay = validateDay(day);
+    const isValidMonth = validateMonth(month);
+    const isValidYear = validateYear(year);
+
+    setIsValidDay(isValidDay);
+    setIsValidMonth(isValidMonth);
+    setIsValidYear(isValidYear);
+
+    if (isValidDay && isValidMonth && isValidYear) {
+      if (!validateCompleteDate()) {
+        console.log("date is in the future!");
+        setFutureDate(!futureDate);
+      } else {
+        setFutureDate(!futureDate);
+        setDate({ day, month, year });
+      }
+    }
   };
   return (
     <form onSubmit={handleSubmit}>
@@ -115,8 +149,13 @@ const AgeInput = ({ setDay, day, setMonth, month, setYear, year }) => {
           )}
         </div>
       </div>
+      {futureDate && (
+        <small className="error-msg block error">
+          This date is in the future
+        </small>
+      )}
       <div className="spacer-line">
-        <button className="btn-submit">
+        <button className="btn-submit" type="submit">
           <img src={arrowIcon} alt="submit icon" className="btn-submit-icon" />
         </button>
       </div>

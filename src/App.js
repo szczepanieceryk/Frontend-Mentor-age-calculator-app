@@ -4,22 +4,17 @@ import AgeInput from "./components/AgeInput";
 import DataDisplay from "./components/DataDisplay";
 
 const App = () => {
-  const [day, setDay] = useState("--");
-  const [month, setMonth] = useState("--");
-  const [year, setYear] = useState("--");
+  const [date, setDate] = useState({
+    day: "--",
+    month: "--",
+    year: "--",
+  });
 
   return (
     <div className="container">
       <div className="app-wrapper">
-        <AgeInput
-          setDay={setDay}
-          day={day}
-          setMonth={setMonth}
-          month={month}
-          setYear={setYear}
-          year={year}
-        />
-        <DataDisplay day={day} month={month} year={year} />
+        <AgeInput setDate={setDate} />
+        <DataDisplay day={date.day} month={date.month} year={date.year} />
       </div>
       <div class="attribution">
         Challenge by{" "}

@@ -6,22 +6,28 @@ const DataDisplay = ({ day, month, year }) => {
   const currentMonth = date.getMonth() + 1;
   const currentYear = date.getFullYear();
 
-  const userDay = day;
-  const userMonth = month;
-  const userYear = year;
+  const userDayInput = parseInt(day, 10);
+  const userMonthInput = parseInt(month, 10);
+  const userYearInput = parseInt(year, 10);
 
-  let daysToDisplay;
-  let monthToDisplay;
-  let yearToDisplay;
+  const daysInMonth = (year, month) => {
+    return new Date(year, month, 0).getDate();
+  };
 
-  if (currentMonth - userMonth < 0) {
-    monthToDisplay = 12 + (currentMonth - userMonth);
-    yearToDisplay = currentYear - userYear - 1;
-  } else {
-    monthToDisplay = currentMonth - userMonth;
-    yearToDisplay = currentYear - userYear;
-  }
-  daysToDisplay = currentDay - userDay;
+  const yearToDisplay =
+    currentYear -
+    userYearInput -
+    (currentMonth < userMonthInput ||
+    (currentMonth === userMonthInput && currentDay < userDayInput)
+      ? 1
+      : 0);
+
+  const monthToDisplay = (currentMonth - userMonthInput + 12) % 12;
+
+  const daysToDisplay =
+    currentDay >= userDayInput
+      ? currentDay - userDayInput
+      : currentDay + daysInMonth(userYearInput, userMonthInput) - userDayInput;
 
   return (
     <div className="data-dsiplay-wrapper">
