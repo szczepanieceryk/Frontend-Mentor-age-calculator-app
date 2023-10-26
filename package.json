@@ -1,5 +1,6 @@
 {
   "name": "age-calculator-app",
+  "homepage": "http://github-szczepanieceryk.github.io/Frontend-Mentor-age-calculator-app",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
