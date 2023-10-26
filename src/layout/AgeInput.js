@@ -9,20 +9,9 @@ const AgeInput = ({ setDate }) => {
   const [isValidDay, setIsValidDay] = useState(true);
   const [isValidMonth, setIsValidMonth] = useState(true);
   const [isValidYear, setIsValidYear] = useState(true);
-  const [futureDate, setFutureDate] = useState(false);
 
   const date = new Date();
   const currentYear = date.getFullYear();
-
-  const validateCompleteDate = () => {
-    const inputDate = new Date(year, month - 1, day);
-    const currentDate = new Date();
-
-    inputDate.setHours(0, 0, 0, 0);
-    currentDate.setHours(0, 0, 0, 0);
-
-    return inputDate <= currentDate;
-  };
 
   const validateDay = (value) => {
     const num = Number(value);
