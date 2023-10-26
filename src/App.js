@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./App.css";
-import AgeInput from "./components/AgeInput";
-import DataDisplay from "./components/DataDisplay";
+import AgeInput from "./layout/AgeInput";
+import DataDisplay from "./layout/DataDisplay";
+import Footer from "./layout/Footer";
 
 const App = () => {
   const [date, setDate] = useState({
@@ -16,17 +17,7 @@ const App = () => {
         <AgeInput setDate={setDate} />
         <DataDisplay day={date.day} month={date.month} year={date.year} />
       </div>
-      <div class="attribution">
-        Challenge by{" "}
-        <a className="link" href="https://www.frontendmentor.io?ref=challenge">
-          Frontend Mentor
-        </a>
-        . Coded by{" "}
-        <a className="link" href="https://github.com/szczepanieceryk">
-          Eryk Szczepaniec{" "}
-        </a>
-        .
-      </div>
+      <Footer />
     </div>
   );
 };

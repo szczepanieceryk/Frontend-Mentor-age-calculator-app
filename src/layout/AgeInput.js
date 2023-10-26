@@ -18,9 +18,6 @@ const AgeInput = ({ setDate }) => {
     const inputDate = new Date(year, month - 1, day);
     const currentDate = new Date();
 
-    console.log("input date", inputDate);
-    console.log("current date", currentDate);
-
     inputDate.setHours(0, 0, 0, 0);
     currentDate.setHours(0, 0, 0, 0);
 
@@ -74,7 +71,6 @@ const AgeInput = ({ setDate }) => {
 
     if (isValidDay && isValidMonth && isValidYear) {
       if (!validateCompleteDate()) {
-        console.log("date is in the future!");
         setFutureDate(!futureDate);
       } else {
         setFutureDate(!futureDate);
