@@ -70,12 +70,7 @@ const AgeInput = ({ setDate }) => {
     setIsValidYear(isValidYear);
 
     if (isValidDay && isValidMonth && isValidYear) {
-      if (!validateCompleteDate()) {
-        setFutureDate(!futureDate);
-      } else {
-        setFutureDate(!futureDate);
-        setDate({ day, month, year });
-      }
+      setDate({ day, month, year });
     }
   };
   return (
@@ -145,11 +140,6 @@ const AgeInput = ({ setDate }) => {
           )}
         </div>
       </div>
-      {futureDate && (
-        <small className="error-msg block error">
-          This date is in the future
-        </small>
-      )}
       <div className="spacer-line">
         <button className="btn-submit" type="submit">
           <img src={arrowIcon} alt="submit icon" className="btn-submit-icon" />
