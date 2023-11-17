@@ -30,16 +30,16 @@ const DataDisplay = ({ day, month, year }) => {
       : currentDay + daysInMonth(userYearInput, userMonthInput) - userDayInput;
 
   return (
-    <div className="data-dsiplay-wrapper">
+    <div className="data-display-wrapper">
       <span className="single-line block">
-        <span className="disaplyed-value">
+        <span className="displayed-value">
           {yearToDisplay >= 0 ? yearToDisplay : defaultValue}
         </span>
 
         <span className="time"> {yearToDisplay === 1 ? "year" : "years"}</span>
       </span>
       <span className="single-line block">
-        <span className="disaplyed-value">
+        <span className="displayed-value">
           {monthToDisplay >= 0 ? monthToDisplay : defaultValue}
         </span>
         <span className="time">
@@ -47,7 +47,7 @@ const DataDisplay = ({ day, month, year }) => {
         </span>
       </span>
       <span className="single-line block">
-        <span className="disaplyed-value">
+        <span className="displayed-value">
           {daysToDisplay >= 0 ? daysToDisplay : defaultValue}
         </span>
         <span className="time">{daysToDisplay === 1 ? "day" : "days"}</span>

@@ -114,13 +114,13 @@ input[type="number"]::-webkit-outer-spin-button {
   transform: translate(-50%, -50%);
 }
 
-.disaplyed-value {
+.displayed-value {
   margin-right: 0.2em;
   color: var(--purple);
 }
 
 .time,
-.disaplyed-value {
+.displayed-value {
   font-weight: bold;
   font-style: italic;
   font-size: 32px;

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./App.css";
+import "./styles/App.css";
 import AgeInput from "./layout/AgeInput";
 import DataDisplay from "./layout/DataDisplay";
 import Footer from "./layout/Footer";

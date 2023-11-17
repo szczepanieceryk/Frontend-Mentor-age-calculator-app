@@ -1,0 +1,83 @@
+@use "./apstaracts/colors";
+
+.inputs-wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 300px;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 350px;
+  }
+
+  .single-input {
+    .label-el {
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 12px;
+      color: colors.$light-gray;
+      cursor: pointer;
+      .input-el {
+        margin: 0.5em 0 0.2em;
+        padding: 1em;
+        max-width: 60px;
+        border-radius: 8px;
+        border: 1px solid colors.$border-color;
+        appearance: none;
+        display: block;
+
+        &[placeholder] {
+          font-weight: bold;
+          color: colors.$light-gray;
+        }
+        &.error {
+          appearance: none;
+          color: colors.$light-gray;
+          border: 1px solid colors.$error;
+        }
+        &:focus {
+          border: 1px solid colors.$purple;
+        }
+      }
+    }
+    .error-msg {
+      font-size: 8px;
+      height: 10px;
+    }
+  }
+}
+
+.spacer-line {
+  position: relative;
+  height: 1px;
+  background-color: colors.$border-color;
+  margin: 3em auto 3em;
+  .btn-submit {
+    position: absolute;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background-color: colors.$purple;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+
+    @media screen and (min-width: 1200px) {
+      left: 90%;
+    }
+
+    &:hover {
+      background-color: colors.$off-black;
+    }
+
+    .btn-submit-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

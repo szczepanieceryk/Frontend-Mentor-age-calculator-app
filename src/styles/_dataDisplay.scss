@@ -1,0 +1,14 @@
+.data-display-wrapper {
+  .single-line {
+    .displayed-value {
+      margin-right: 0.2em;
+      color: var(--purple);
+    }
+    .time,
+    .displayed-value {
+      font-weight: bold;
+      font-style: italic;
+      font-size: 32px;
+    }
+  }
+}

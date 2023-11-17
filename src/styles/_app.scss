@@ -1,0 +1,44 @@
+@use "./apstaracts/colors";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  background-color: colors.$body-bgc-color;
+}
+
+.app-wrapper {
+  padding: 2em 1em;
+  width: 85%;
+  max-width: 400px;
+  background-color: colors.$app-bgc-color;
+  border-radius: 10px 10px 45px 10px;
+  .attribution {
+    margin: 2em auto 0;
+    font-size: 11px;
+    text-align: center;
+    .link {
+      color: colors.$dark-blue;
+    }
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+.block {
+  display: block;
+}
+
+.error {
+  color: colors.$error;
+  display: block;
+}
