@@ -1,8 +1,10 @@
+@use "./abstaracts/colors";
+
 .data-display-wrapper {
   .single-line {
     .displayed-value {
       margin-right: 0.2em;
-      color: var(--purple);
+      color: colors.$purple;
     }
     .time,
     .displayed-value {

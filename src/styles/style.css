@@ -81,9 +81,10 @@
   transform: translate(-50%, -50%);
 }
 
+/* colors */
 .data-display-wrapper .single-line .displayed-value {
   margin-right: 0.2em;
-  color: var(--purple);
+  color: hsl(259deg, 100%, 65%);
 }
 .data-display-wrapper .single-line .time,
 .data-display-wrapper .single-line .displayed-value {
