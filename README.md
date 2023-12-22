@@ -6,5 +6,6 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
 
 ## Links
 
-- Solution URL: [Add solution URL here]([https://your-solution-url.com](https://www.frontendmentor.io/solutions/age-calculator-app-in-react-with-input-validation-using-usestate-_FqfXZ1oxq)
-- Live Site URL: [Add live site URL here]([https://your-live-site-url.com](https://szczepanieceryk.github.io/Frontend-Mentor-age-calculator-app/)
+- [Solution URL](https://www.frontendmentor.io/solutions/age-calculator-app-in-react-with-input-validation-using-usestate-_FqfXZ1oxq)
+
+- [Live Site URL](https://szczepanieceryk.github.io/Frontend-Mentor-age-calculator-app/)
