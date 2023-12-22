@@ -1,4 +1,10 @@
-const DataDisplay = ({ day, month, year }) => {
+import React from "react";
+type InitialData = {
+  day: string;
+  month: string;
+  year: string;
+};
+const DataDisplay = ({ day, month, year }: InitialData) => {
   const date = new Date();
 
   const defaultValue = "--";
@@ -10,7 +16,7 @@ const DataDisplay = ({ day, month, year }) => {
   const userMonthInput = parseInt(month, 10);
   const userYearInput = parseInt(year, 10);
 
-  const daysInMonth = (year, month) => {
+  const daysInMonth = (year: number, month: number) => {
     return new Date(year, month, 0).getDate();
   };
 

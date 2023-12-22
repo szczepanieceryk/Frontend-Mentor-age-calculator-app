@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./styles/App.css";
 import AgeInput from "./layout/AgeInput";
-import DataDisplay from "./layout/DataDisplay";
+import DataDisplay from "./layout/DataDisplay.tsx";
 import Footer from "./layout/Footer";
 
 const App = () => {
