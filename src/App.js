@@ -1,6 +1,7 @@
+import React from "react";
 import { useState } from "react";
 import "./styles/App.css";
-import AgeInput from "./layout/AgeInput";
+import AgeInput from "./layout/AgeInput.tsx";
 import DataDisplay from "./layout/DataDisplay.tsx";
 import Footer from "./layout/Footer";
 

@@ -1,7 +1,10 @@
+import React from "react";
 import { useState } from "react";
 import arrowIcon from "../images/icon-arrow.svg";
 
 const AgeInput = ({ setDate }) => {
+  type StringInput = string;
+
   const [day, setDay] = useState("--");
   const [month, setMonth] = useState("--");
   const [year, setYear] = useState("--");
@@ -11,24 +14,24 @@ const AgeInput = ({ setDate }) => {
   const [isValidYear, setIsValidYear] = useState(true);
 
   const date = new Date();
-  const currentYear = date.getFullYear();
+  const currentYear: number = date.getFullYear();
 
-  const validateDay = (value) => {
+  const validateDay = (value: StringInput) => {
     const num = Number(value);
     return num > 0 && num <= 31;
   };
 
-  const validateMonth = (value) => {
+  const validateMonth = (value: StringInput) => {
     const num = Number(value);
     return num > 0 && num <= 12;
   };
 
-  const validateYear = (value) => {
+  const validateYear = (value: StringInput) => {
     const num = Number(value);
     return num > 0 && num <= currentYear;
   };
 
-  const handleChange = (event) => {
+  const handleChange = (event: { target: { id: string; value: string } }) => {
     const { id, value } = event.target;
 
     const dayInputId = "day-input-id";
