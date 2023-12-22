@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Frontend-Mentor-age-calculator-app/static/css/main.321a4651.css",
-    "main.js": "/Frontend-Mentor-age-calculator-app/static/js/main.cb7e2de1.js",
+    "main.js": "/Frontend-Mentor-age-calculator-app/static/js/main.a17db90e.js",
     "index.html": "/Frontend-Mentor-age-calculator-app/index.html",
     "static/media/icon-arrow.svg": "/Frontend-Mentor-age-calculator-app/static/media/icon-arrow.7c4b01a82930040a3b9d56cca515f428.svg",
     "main.321a4651.css.map": "/Frontend-Mentor-age-calculator-app/static/css/main.321a4651.css.map",
-    "main.cb7e2de1.js.map": "/Frontend-Mentor-age-calculator-app/static/js/main.cb7e2de1.js.map"
+    "main.a17db90e.js.map": "/Frontend-Mentor-age-calculator-app/static/js/main.a17db90e.js.map"
   },
   "entrypoints": [
     "static/css/main.321a4651.css",
-    "static/js/main.cb7e2de1.js"
+    "static/js/main.a17db90e.js"
   ]
 }
