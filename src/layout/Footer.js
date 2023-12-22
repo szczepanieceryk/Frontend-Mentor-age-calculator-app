@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div class="attribution">
+    <div className="attribution">
       Challenge by{" "}
       <a className="link" href="https://www.frontendmentor.io?ref=challenge">
         Frontend Mentor
